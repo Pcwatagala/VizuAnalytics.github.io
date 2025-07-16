@@ -17,6 +17,7 @@
       color: white;
       padding: 60px 20px;
       text-align: center;
+      animation: fadeIn 1s ease-out;
     }
     header h1 {
       font-size: 3em;
@@ -30,6 +31,7 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      animation: fadeIn 1.2s ease-out;
     }
     h2 {
       font-size: 2em;
@@ -53,15 +55,17 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-align: left;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 0.6s ease-out forwards;
     }
-    .card h3 {
-      margin-top: 0;
-      color: #2c3e50;
-    }
-    .card p {
-      font-size: 0.95em;
-      color: #555;
-    }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+    .card:nth-child(4) { animation-delay: 0.3s; }
+    .card:nth-child(5) { animation-delay: 0.4s; }
+    .card:nth-child(6) { animation-delay: 0.5s; }
+    .card:nth-child(7) { animation-delay: 0.6s; }
+
     .cta-button {
       display: inline-block;
       margin-top: 25px;
@@ -71,16 +75,34 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .cta-button:hover {
       background-color: #1a1a1a;
+      transform: translateY(-2px);
     }
     footer {
       text-align: center;
       padding: 30px 20px;
       font-size: 0.9em;
       color: #999;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -98,7 +120,6 @@
     We deliver tailored analytics solutions that help organizations make better, faster, and smarter decisions.
   </p>
 </section>
-
 
 <section class="services">
   <h2>Advanced Analytics Capabilities</h2>
