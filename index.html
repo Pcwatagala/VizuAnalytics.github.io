@@ -17,7 +17,10 @@
       color: white;
       padding: 60px 20px;
       text-align: center;
-      animation: fadeIn 1s ease-out;
+    }
+    header img {
+      height: 60px;
+      margin-bottom: 20px;
     }
     header h1 {
       font-size: 3em;
@@ -31,17 +34,12 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
-      animation: fadeIn 1.2s ease-out;
     }
     h2 {
       font-size: 2em;
       margin-bottom: 20px;
       text-align: center;
       color: #1a1a1a;
-    }
-    .about, .services, .contact {
-      margin-top: 30px;
-      text-align: center;
     }
     .services-grid {
       display: grid;
@@ -55,17 +53,15 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-align: left;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: slideUp 0.6s ease-out forwards;
     }
-    .card:nth-child(2) { animation-delay: 0.1s; }
-    .card:nth-child(3) { animation-delay: 0.2s; }
-    .card:nth-child(4) { animation-delay: 0.3s; }
-    .card:nth-child(5) { animation-delay: 0.4s; }
-    .card:nth-child(6) { animation-delay: 0.5s; }
-    .card:nth-child(7) { animation-delay: 0.6s; }
-
+    .card h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+    }
     .cta-button {
       display: inline-block;
       margin-top: 25px;
@@ -75,40 +71,32 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.3s ease;
     }
     .cta-button:hover {
       background-color: #1a1a1a;
-      transform: translateY(-2px);
     }
     footer {
       text-align: center;
       padding: 30px 20px;
       font-size: 0.9em;
       color: #999;
-      animation: fadeIn 1s ease-out;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .vision-mission h3 {
+      margin-top: 20px;
+      font-size: 1.4em;
+      color: #1a1a1a;
     }
-
-    @keyframes slideUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .vision-mission p {
+      font-size: 1em;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
 <header>
+  <img src="logo.png" alt="VizuAnalytics Logo" />
   <h1>VizuAnalytics</h1>
   <p>Turning your business data into smart decisions</p>
 </header>
@@ -116,9 +104,32 @@
 <section class="about">
   <h2>About Us</h2>
   <p>
-    VizuAnalytics empowers small and medium-sized businesses to harness the power of data. 
-    We deliver tailored analytics solutions that help organizations make better, faster, and smarter decisions.
+    We are a data analytics startup focused on internal business intelligence, with expertise in uncovering customer, sales, and operational insights. 
+    Backed by 20 years of combined industry experience, our team brings a proven track record in transforming raw data into meaningful business insights.
   </p>
+  <p>
+    With a strong foundation in market research, data analysis, forecasting, and data restructuring, we empower organizations to make smarter, data-driven decisions.
+    From identifying market opportunities to predicting future trends, we’ve helped businesses across sectors:
+  </p>
+  <ul style="text-align:left; max-width:800px; margin:auto; padding-left:20px; line-height:1.6;">
+    <li>Conduct deep-dive market research to unlock customer and competitive intelligence</li>
+    <li>Perform advanced analytics to extract actionable insights from complex datasets</li>
+    <li>Develop forecasting models that anticipate demand, revenue, and customer behavior</li>
+    <li>Restructure and clean data systems to enable reliable and scalable reporting</li>
+  </ul>
+  <p>
+    We combine this wealth of experience with innovative thinking and modern tools to deliver tailored solutions that drive growth, efficiency, and strategic clarity.
+  </p>
+</section>
+
+<section class="vision-mission">
+  <h2>Our Vision & Mission</h2>
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h3>Vision</h3>
+    <p>A world where every business uses its data to grow profitably.</p>
+    <h3>Mission</h3>
+    <p>Help companies make smarter, data-driven decisions.</p>
+  </div>
 </section>
 
 <section class="services">
